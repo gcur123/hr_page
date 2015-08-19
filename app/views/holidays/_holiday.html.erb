@@ -1,0 +1,23 @@
+  <p>
+    <strong>Name:</strong>
+    <%= holiday.name %>
+  </p>
+ 
+  <p>
+    <strong>Start_date:</strong>
+    <%= holiday.start_date %>
+  </p>
+
+  <p>
+    <strong>End_date:</strong>
+    <%= holiday.end_date %>
+  </p>
+
+  <p>
+    <strong>Number_of_days:</strong>
+    <%= holiday.number_of_days %>
+  </p>
+      <td><%= link_to 'Destroy', holiday_path(holiday),
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

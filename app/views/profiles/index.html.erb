@@ -1,0 +1,27 @@
+<h1>Employee Profile</h1>
+<h3><%= link_to 'New profile', new_profile_path %></h3> 
+<table class="table table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Position</th>
+    <th>Start_date</th>
+    <th>End_date</th>
+    <th colspan="3"></th>
+  </tr>
+ 
+  <% @profiles.each do |profile| %>
+    <tr>
+      <td><%= profile.name %></td>
+      <td><%= profile.email %></td>
+      <td><%= profile.position %></td>
+      <td><%= profile.start_date %></td>
+      <td><%= profile.end_date %></td>
+      <td><%= link_to 'Show', profile_path(profile) %></td>
+      <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+      <td><%= link_to 'Destroy', profile_path(profile),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
