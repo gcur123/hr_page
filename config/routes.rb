@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :profiles
   resources :holidays
+  resources :jobs
 
   root 'welcome#index'
 
