@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
+<html lang="en">
+  <head>
   <title>HrPage</title>
   
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= render 'shared/navbar' %>
@@ -15,6 +18,8 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <%= yield %>
-
 </body>
+<div class="mastfoot">
+ <h6 class="footertext">&copy; HR Solutions &trade; 2015</h6>
+ </div>
 </html>

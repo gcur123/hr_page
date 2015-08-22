@@ -1,7 +1,13 @@
 class ProfilesController < ApplicationController
   http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+
   def index
-    @profiles = Profile.all
+  @profiles = Profile.all
+  if params[:search]
+    @profiles = Profile.search(params[:search]).order("created_at DESC")
+  else
+    @profiles = Profile.all.order('created_at DESC')
+  end
   end
 
   def show

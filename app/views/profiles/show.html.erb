@@ -1,3 +1,4 @@
+<div id="profile">
 <h1>Employee Profile</h1>
 <p>
   <strong>Name:</strong>
@@ -23,12 +24,12 @@
   <strong>End_date:</strong>
   <%= @profile.end_date %>
 </p>
-
-<h2>Holidays</h2>
-<%= render @profile.holidays %>
-
 <p>
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<div id="links">
+<%= link_to 'Edit', edit_profile_path(@profile), class: "btn btn-sm btn-default" %> |
+<%= link_to 'Back', profiles_path, class: "btn btn-sm btn-default" %>
 </p>
+
+<h2>Annual Leave</h2>
+<%= render @profile.holidays %>
+</div>

@@ -2,6 +2,11 @@ class HolidaysController < ApplicationController
   http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
   def index
     @holidays = Holiday.all
+  if params[:search]
+    @holidays = Holiday.search(params[:search]).order("created_at DESC")
+  else
+    @holidays = Holiday.all.order('created_at DESC')
+  end
   end
 
   def show

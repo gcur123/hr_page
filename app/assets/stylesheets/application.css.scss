@@ -10,26 +10,47 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
+ *= require_tree .
  */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+
+
 body {
-    background-color: #F3F4F5;
-    font-family: 'Lato', sans-serif;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    margin-right: 300px;
-    margin-left: 50px;
+  height: 100%;
+  background-color: #777;
+  font-family: 'Loto';
+  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  margin-left: 50px;
 }
 
+h1
+{
+ color: white;
+ text-align: center;
+ margin-top: 100px;
+}
+
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
 
 
-table,tr,th,td{
-border: 2px solid black;
-padding: 15px;
+#navbar{
+  font-family: sans-serif;
+}
+
+#container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: blue;
 }
 
 

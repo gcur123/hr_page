@@ -1,4 +1,8 @@
-
+    <head>  
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+    </head>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
@@ -16,12 +20,18 @@
         <li class="active"><%= link_to "Home", root_path %></li>
         <li><%= link_to "Profile", profiles_path %></li>
         <li><%= link_to "Annual Leave", holidays_path %></li>
-        <li><%= link_to "Careers", jobs_path %></li>
+	<li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="jobs_path">Careers<span class="caret"></span></a>
+          <ul class="dropdown-menu">                       
+        <% Category.all.each do |category| %>
+        <li><%= link_to category.name, jobs_path(category: category.name) %></li>
+        <% end %>
+          </ul>
+        </li>
         <%= render 'devise/menu/registration_items' %>
          <%= render 'devise/menu/login_items' %>
           </ul>
-          <form class="navbar-form navbar-right" %>
-            <input type="text" class="form-control" placeholder="Search...">
+  </nav>
           </form>
         </div>
       </div>
