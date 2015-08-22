@@ -6,6 +6,16 @@ gem 'autoprefixer-rails'
 gem 'haml', '~> 4.0.7'
 gem 'simple_form', '~> 3.1.0'
 
+group :production do
+  gem 'pg'
+  gem "activerecord-postgresql-adapter"
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
