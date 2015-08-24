@@ -1,5 +1,5 @@
-<div id="profile">
-<h1>Employee Profile</h1>
+<div id="profile-wrap">
+<h2>Employee Profile</h2>
 <p>
   <strong>Name:</strong>
   <%= @profile.name %>
@@ -25,11 +25,7 @@
   <%= @profile.end_date %>
 </p>
 <p>
-<div id="links">
 <%= link_to 'Edit', edit_profile_path(@profile), class: "btn btn-sm btn-default" %> |
 <%= link_to 'Back', profiles_path, class: "btn btn-sm btn-default" %>
 </p>
-
-<h2>Annual Leave</h2>
-<%= render @profile.holidays %>
 </div>

@@ -1,24 +1,37 @@
-
 <%= form_for :holiday, url: holidays_path do |f| %>
 
-  <div class="field">
+  <% if @holiday.errors.any? %>
+    <div id="error_explanation">
+      <h4>
+        <%= pluralize(@holiday.errors.count, "error") %> prohibited
+        this holiday from being saved:
+      </h4>
+      <ul>
+        <% @holiday.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <p>
     <%= f.label :name %><br>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
+    </p>
+    <p>
     <%= f.label :start_date %><br>
     <%= f.text_field :start_date %>
-  </div>
-  <div class="field">
+    </p>
+    <p>
     <%= f.label :end_date %><br>
     <%= f.text_field :end_date %>
-  </div>
-  <div class="field">
+    </p>
+    <p>
     <%= f.label :number_of_days %><br>
     <%= f.text_field :number_of_days %>
-  </div>
+    </p>
   <br>
-  <div class="field">
+  <p>
     <%= f.submit %>
-</div>
+   </p>
 <% end %>

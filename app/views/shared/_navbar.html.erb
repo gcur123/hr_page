@@ -1,10 +1,18 @@
-    <head>  
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<head>
+  <script src="jquery.js"></script>
+  <script src="bootstrap.js"></script>
+  <script type="text/javascript"> $(document).ready(function () { $('.dropdown-toggle').dropdown(); }); </script>
+</head>
+    <head>
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+ 
+
+   <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -20,20 +28,17 @@
         <li class="active"><%= link_to "Home", root_path %></li>
         <li><%= link_to "Profile", profiles_path %></li>
         <li><%= link_to "Annual Leave", holidays_path %></li>
+        <li><%= link_to "Careers", jobs_path %></li>
 	<li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="jobs_path">Careers<span class="caret"></span></a>
-          <ul class="dropdown-menu">                       
-        <% Category.all.each do |category| %>
-        <li><%= link_to category.name, jobs_path(category: category.name) %></li>
-        <% end %>
-          </ul>
-        </li>
+              <a href="jobs_path" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User Options<span class="caret"></span></a>
+          <ul class="dropdown-menu">
         <%= render 'devise/menu/registration_items' %>
          <%= render 'devise/menu/login_items' %>
           </ul>
-  </nav>
+          </nav>
           </form>
         </div>
       </div>
+</div>
     </nav>
     

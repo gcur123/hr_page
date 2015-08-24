@@ -17,7 +17,7 @@
     <strong>Number_of_days:</strong>
     <%= holiday.number_of_days %>
   </p>
-      <td><%= link_to 'Destroy', holiday_path(holiday),
+      <td><%= link_to 'Destroy', holiday_path(holiday), class: "btn btn-sm btn-default",
                method: :delete,
                data: { confirm: 'Are you sure?' } %>
 </p>

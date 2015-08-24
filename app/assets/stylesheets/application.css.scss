@@ -18,39 +18,163 @@
 @import "bootstrap";
 
 
+/* mixins, variables, etc. */
 
+$gray-medium-light: #eaeaea;
+
+/* universal */
 
 body {
-  height: 100%;
-  background-color: #777;
-  font-family: 'Loto';
-  margin-top: 50px;
-  margin-bottom: 100px;
-  margin-right: 100px;
-  margin-left: 50px;
+  padding-top: 60px;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cedce7+0,596a72+100;Grey+3D+%231 */
+background: #cedce7; /* Old browsers */
+background: -moz-linear-gradient(top,  #cedce7 0%, #596a72 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cedce7), color-stop(100%,#596a72)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #cedce7 0%,#596a72 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #cedce7 0%,#596a72 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=0 ); /* IE6-9 */
+
 }
 
-h1
-{
- color: white;
- text-align: center;
- margin-top: 100px;
+section {
+  overflow: auto;
 }
 
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
   }
-
-
-#navbar{
-  font-family: sans-serif;
 }
 
-#container {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: blue;
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: left;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
 
+/* errors */
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 4px;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+}
+
+#page-wrap {
+	width: 60%;
+	background-color: #e9eef1;
+	padding: 20px 50px 20px 50px;
+	margin: 20px auto;
+	min-height: 500px;
+	height: auto !important;
+	height: 500px;
+	border: 2px solid #ccc;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 18px; 
+       -webkit-border-radius: 18px; 
+       -moz-border-radius: 18px;
+}
+
+
+#jobs {
+	width: 100%;
+	padding: 20px 50px 20px 50px;
+	margin: 20px auto;
+	min-height: 500px;
+	height: auto !important;
+	height: 500px;
+        font-size: 17px;
+        line-height: 20px;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 18px; 
+       -webkit-border-radius: 18px; 
+       -moz-border-radius: 18px;
+}
+
+#profile-wrap {
+	width: 50%;
+	padding: 20px 50px 20px 50px;
+	margin: 20px auto;
+	min-height: 500px;
+	height: auto !important;
+	height: 500px;
+	border: 2px solid #ccc;
+        font-size: 17px;
+        line-height: 20px;
+        font-family: Arial, Helvetica;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 18px; 
+       -webkit-border-radius: 18px; 
+       -moz-border-radius: 18px;
+}
+
+#welcome {
+	width: 80%;
+	padding: 20px 50px 20px 50px;
+	margin: 20px auto;
+	min-height: 500px;
+	height: auto !important;
+	height: 500px;
+        font-size: 17px;
+        line-height: 25px;
+        font-family: sans-serif;
+        text-decoration: none;
+}
+
+
+tr {
+background: #E6E6E6;
+}
+
+th {
+background-color: rgb(211, 211, 211);
+}
